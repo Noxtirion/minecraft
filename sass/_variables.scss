@@ -1,0 +1,126 @@
+$shadow-color-red: rgba(139, 0, 0, 0.6);
+$button-color-blue: rgba(0, 0, 139, 0.6);
+$header-title-bg-color: rgba(0, 0, 0, 0.2);
+$border-button-color: darkgrey;
+$background-color: #3b4751;
+$border-value: 50%;
+$h-color: #fff;
+
+$breakpoints: (
+   xxsmall: (
+      min-width: 375px
+   ),
+   xsmall: (
+      min-width: 460px
+   ),
+   small: (
+      min-width: 640px
+   ),
+   smaller: (
+      min-width: 700px
+   ),
+   medium: (
+      min-width: 800px
+   ),
+   xmedium: (
+      min-width: 850px
+   ),
+   large: (
+      min-width: 1024px
+   ),
+   xlarge: (
+      min-width: 1200px
+   ),
+   xxlarge: (
+      min-width: 1440px
+   ),
+   hd: (
+      min-width: 1920px
+   )
+);
+
+@mixin media-query($breakpoint) {
+   $size: map-get($breakpoints, $breakpoint);
+   @if ($size) {
+      @media #{$size} {
+         @content;
+      }
+   } @else {
+      @error '"#{$breakpoint}" - wrong value!';
+   }
+}
+
+@mixin containers($width: 100%, $overflow: hidden, $height: 30vw) {
+   width: $width;
+   overflow: $overflow;
+   height: $height;
+   @content;
+}
+
+@mixin flex-container(
+   $display: flex,
+   $justify-content: center,
+   $align-items: center,
+   $flex-direction: column
+) {
+   display: $display;
+   justify-content: $justify-content;
+   align-items: $align-items;
+   flex-direction: $flex-direction;
+   @content;
+}
+
+@mixin buttons($color, $height: 5rem, $width: 5rem) {
+   background: $color;
+   width: $width;
+   height: $height;
+   margin: 5px 10px;
+   box-shadow: 6px 8px 8px rgba(0, 0, 0, 0.5);
+   border: 0px;
+   border-radius: 5%;
+   color: #fff;
+   font-size: large;
+   transition: box-shadow 0.1s, transform 0.1s;
+   cursor: pointer;
+}
+
+@mixin buttons-activate {
+   transform: translateY(5px);
+   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+}
+
+@mixin header-title(
+   $position: absolute,
+   $background-color: $header-title-bg-color,
+   $height: 50%,
+   $width: 0%,
+   $top: 0%,
+   $display: flex,
+   $align-items: center
+) {
+   position: $position;
+   background-color: $header-title-bg-color;
+   height: $height;
+   width: $width;
+   top: $top;
+   display: $display;
+   align-items: $align-items;
+   @content;
+}
+
+@mixin titles() {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding: 0.5rem;
+   margin: 0rem;
+   @content;
+}
+
+@mixin images($float: left, $margin-right: 0.5rem, $height: 27px, $width: 27px) {
+   float: $float;
+   margin-right: $margin-right;
+   height: $height;
+   width: $width;
+}

@@ -1,0 +1,36 @@
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+}
+
+@font-face {
+   font-family: "Mine";
+   src: url("../font/Minecraft/minecraft.woff") format("woff");
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "MineBold";
+   src: url("../font/Minecraft_Bold/3_Minecraft-Bold.woff") format("woff");
+   font-weight: normal;
+   font-style: normal;
+}
+
+body {
+   margin: 0px;
+   font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+p {
+   font-size: 1.1rem;
+   line-height: 1.7rem;
+}
+
+@import "_variables.scss";
+@import "_menu.scss";
+@import "_header.scss";
+@import "_article.scss";
+@import "_buttonReturn";
+@import "_logo-footer";

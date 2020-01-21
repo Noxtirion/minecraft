@@ -1,0 +1,210 @@
+.article {
+   @include containers($height: auto);
+   @include flex-container;
+
+   a {
+      text-decoration: none;
+      color: darkred;
+      font-size: 0.8rem;
+      font-family: MineBold, Georgia, "Times New Roman", Times, serif;
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+   &__title {
+      text-align: center;
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0rem;
+      font-size: 1.2rem;
+      font-family: Mine, Georgia, "Times New Roman", Times, serif;
+      background-color: rgba(77, 103, 16, 0.7);
+      border-top: 5px solid darken(rgba(107, 128, 56, 0.7), 10%);
+      border-bottom: 5px solid darken(rgba(107, 128, 56, 0.7), 10%);
+   }
+   &__title--next {
+      padding: 1rem;
+   }
+
+   @include media-query(smaller) {
+      .article__title {
+         font-size: 2rem;
+      }
+   }
+
+   &__wrapper {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      margin-top: 2rem;
+
+      .article__image {
+         display: none;
+      }
+      @include media-query(xxlarge) {
+         .article__image {
+            width: 12.5rem;
+            display: flex;
+            justify-content: center;
+            img {
+               height: 13rem;
+            }
+         }
+         .article__image--ladder {
+            opacity: 0;
+            transition: opacity 350ms ease-in;
+         }
+         .article__image--ladder.appear {
+            opacity: 1;
+         }
+
+         .article__image--figure-left {
+            transform: translateX(-50%);
+         }
+
+         .article__image--figure-right {
+            transform: translateX(50%);
+         }
+
+         .article__image--figure-left,
+         .article__image--figure-right {
+            transition: opacity 350ms ease-in, transform 450ms ease;
+            opacity: 0;
+         }
+
+         .article__image--figure-left.appear,
+         .article__image--figure-right.appear {
+            transform: translateX(0%);
+            opacity: 1;
+         }
+      }
+   }
+
+   &__wrapper--topMargin {
+      margin-top: 1rem;
+   }
+
+   &__wrapper--center {
+      align-items: center;
+   }
+
+   &__text {
+      max-width: 64rem;
+      text-align: left;
+      padding-right: 2.5rem;
+      font-size: 1rem;
+      line-height: 1.7rem;
+      margin-bottom: 1rem;
+
+      .article__list {
+         list-style-type: none;
+      }
+
+      ul {
+         list-style-type: disc;
+      }
+
+      img {
+         @include images;
+      }
+
+      .article__sub-section {
+         display: flex;
+         justify-content: center;
+         margin-bottom: 1rem;
+         font-size: 1.3rem;
+         text-align: center;
+         &--bottom {
+            padding: 1rem 0rem 0rem;
+         }
+      }
+
+      h3 {
+         margin: 0rem;
+         padding: 0rem 0rem 1rem 2.5rem;
+      }
+
+      @include media-query(xmedium) {
+         img {
+            height: 54px;
+            width: 54px;
+            flex-shrink: 0;
+         }
+
+         h3 {
+            display: flex;
+            align-items: center;
+         }
+      }
+
+      img:after {
+         content: "";
+         display: block;
+         clear: both;
+      }
+
+      .article__secondHeading {
+         padding-top: 1rem;
+      }
+
+      p {
+         padding-left: 2.5rem;
+      }
+   }
+
+   &__text--next {
+      img {
+         @include images;
+      }
+      h3 {
+         display: block;
+      }
+   }
+
+   &__text--second {
+      margin-bottom: 0;
+      li {
+         margin-bottom: 2rem;
+         list-style-type: none;
+         margin-left: 35px;
+      }
+      h3 {
+         font-size: 1.05rem;
+      }
+   }
+
+   &__bottom {
+      width: 100%;
+      background-color: rgba(108, 72, 25, 0.816);
+      border-top: 5px solid darken(rgba(107, 128, 56, 0.7), 10%);
+      display: flex;
+      justify-content: center;
+      .article__bottomText {
+         font-size: 1rem;
+         padding: 2rem 2.5rem;
+         text-align: left;
+         margin: 0rem;
+         max-width: 64rem;
+      }
+      img {
+         @include images;
+      }
+      @include media-query(xmedium) {
+         img {
+            height: 54px;
+            width: 54px;
+         }
+      }
+
+      img:after {
+         content: "";
+         display: block;
+         clear: both;
+      }
+   }
+}
+
+.article-second {
+   background-color: #fff;
+}

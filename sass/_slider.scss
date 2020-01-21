@@ -1,0 +1,47 @@
+.slider__container {
+   @include containers($height: 25rem);
+   @include flex-container;
+   border-top: 5px solid lighten($background-color, $border-value);
+   border-bottom: 5px solid lighten($background-color, $border-value);
+   @include media-query(medium) {
+      border: 0px;
+      height: 45vw;
+   }
+   .slider__wrapper {
+      @include titles;
+      width: 100%;
+      p {
+         padding: 0.4rem;
+         min-width: 7rem;
+         margin: 0rem;
+         color: $h-color;
+      }
+      .slider__button--red {
+         @include buttons($button-color-red, 3rem);
+         &:active {
+            @include buttons-activate;
+         }
+         &:hover {
+            background: lighten($button-color-red, 10%);
+         }
+      }
+      .slider__button--blue {
+         @include buttons($button-color-blue, 3rem);
+         &:active {
+            @include buttons-activate;
+         }
+         &:hover {
+            background: lighten($button-color-blue, 25%);
+         }
+      }
+   }
+
+   h2 {
+      @include titles;
+      color: $h-color;
+   }
+   h3 {
+      @include titles;
+      color: $h-color;
+   }
+}

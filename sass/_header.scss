@@ -1,0 +1,112 @@
+.header {
+   @include containers($height: auto);
+   position: relative;
+
+   &__wrapper {
+      position: relative;
+
+      text-shadow: 5px 5px 5px #000;
+      .header__image {
+         display: block;
+         height: 100vh;
+         margin: 0 auto;
+         background: url(../img/MINECRAFT_1920x1080.png) center no-repeat;
+      }
+
+      .header__title--big {
+         @include header-title;
+         justify-content: center;
+         align-items: flex-end;
+         h1 {
+            color: #fff;
+            font-size: 1rem;
+            opacity: 0;
+            padding-left: 0.5rem;
+         }
+      }
+      .header__title--small {
+         @include header-title($height: 50%, $top: 50%);
+         justify-content: flex-start;
+         align-items: center;
+         flex-direction: column;
+         h2 {
+            color: rgb(255, 255, 255);
+            font-size: 1rem;
+            opacity: 0;
+
+            padding-left: 0.5rem;
+         }
+         .header__fuse {
+            display: flex;
+         }
+         .header__server {
+            font-size: 0.8rem;
+            text-align: center;
+            letter-spacing: 2px;
+            @include media-query(medium) {
+               // font-size: 1.5vw;
+            }
+         }
+         // .header__craftSmall {
+         //    font-family: Mine, Georgia, "Times New Roman", Times, serif;
+         //    color: darkred;
+         // }
+      }
+   }
+}
+
+@keyframes growH1 {
+   50% {
+      width: 0;
+   }
+   100% {
+      width: 100%;
+   }
+}
+
+.header__title--big-grow {
+   animation-name: growH1;
+   animation-duration: 2s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes growH2 {
+   0% {
+      width: 0;
+   }
+   100% {
+      width: 100%;
+   }
+}
+
+.header__title--small-grow {
+   animation-name: growH2;
+   animation-duration: 3s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes growText {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+.header__title--big-grow h1 {
+   animation-name: growText;
+   animation-duration: 2s;
+   animation-delay: 2s;
+   animation-fill-mode: forwards;
+}
+
+.header__title--small-grow h2 {
+   animation-name: growText;
+   animation-duration: 1s;
+   animation-delay: 3s;
+   animation-fill-mode: forwards;
+}
+
+.header-second {
+   background-color: #fff;
+}

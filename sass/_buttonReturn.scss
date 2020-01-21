@@ -1,0 +1,35 @@
+.button-top {
+   pointer-events: none;
+   opacity: 0;
+   transition: opacity 400ms ease;
+
+   &__link {
+      height: 100%;
+      width: 100%;
+   }
+
+   &__return {
+      position: fixed;
+      background-color: rgba(108, 72, 25, 0.4);
+      font-family: MineBold, Georgia, "Times New Roman", Times, serif;
+      height: 2.5rem;
+      width: 2.5rem;
+      bottom: 1.5rem;
+      right: 2.5rem;
+      cursor: pointer;
+      outline: none;
+      border: 0rem;
+      color: #fff;
+      border-top: 5px solid rgba(77, 103, 16, 0.4);
+
+      &:hover {
+         background-color: darken(rgba(108, 72, 25, 0.4), 10%);
+         font-size: 1.1rem;
+      }
+   }
+}
+
+.button-top.appear {
+   pointer-events: visible;
+   opacity: 1;
+}
