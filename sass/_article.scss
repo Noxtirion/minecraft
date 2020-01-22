@@ -101,6 +101,11 @@
          list-style-type: none;
       }
 
+      .article__color-red {
+         color: darkred;
+         text-decoration: underline;
+      }
+
       ul {
          list-style-type: disc;
       }
@@ -112,17 +117,17 @@
       .article__sub-section {
          display: flex;
          justify-content: center;
-         margin-bottom: 1rem;
+         margin: 2rem 0rem;
          font-size: 1.3rem;
          text-align: center;
-         &--bottom {
-            padding: 1rem 0rem 0rem;
+         &--top {
+            margin-top: 0;
          }
       }
 
       h3 {
          margin: 0rem;
-         padding: 0rem 0rem 1rem 2.5rem;
+         padding: 0rem 0rem 0rem 1.5rem;
       }
 
       @include media-query(xmedium) {
@@ -144,12 +149,12 @@
          clear: both;
       }
 
-      .article__secondHeading {
-         padding-top: 1rem;
-      }
+      // .article__secondHeading {
+      //    padding-top: 0rem;
+      // }
 
       p {
-         padding-left: 2.5rem;
+         padding-left: 1.5rem;
       }
    }
 
@@ -171,6 +176,7 @@
       }
       h3 {
          font-size: 1.05rem;
+         padding: 0rem 0rem 0rem 2.5rem;
       }
    }
 
@@ -205,6 +211,6 @@
    }
 }
 
-.article-second {
+.article--second {
    background-color: #fff;
 }

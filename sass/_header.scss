@@ -4,8 +4,8 @@
 
    &__wrapper {
       position: relative;
-
       text-shadow: 5px 5px 5px #000;
+
       .header__image {
          display: block;
          height: 100vh;
@@ -13,8 +13,11 @@
          background: url(../img/MINECRAFT_1920x1080.png) center no-repeat;
       }
 
+      // .header__image--min {
+      // }
+
       .header__title--big {
-         @include header-title;
+         @include header-title($height: 55%);
          justify-content: center;
          align-items: flex-end;
          h1 {
@@ -22,19 +25,51 @@
             font-size: 1rem;
             opacity: 0;
             padding-left: 0.5rem;
+            @include media-query(xxsmall) {
+               font-size: 1.2rem;
+            }
+            @include media-query(xsmall) {
+               font-size: 1.6rem;
+            }
+            @include media-query(smaller) {
+               font-size: 2.2rem;
+            }
+            @include media-query(medium) {
+               font-size: 2.5rem;
+            }
+            @include media-query(xlarge) {
+               font-size: 4rem;
+            }
+            @include media-query(xxlarge) {
+               font-size: 5rem;
+            }
          }
       }
       .header__title--small {
-         @include header-title($height: 50%, $top: 50%);
+         @include header-title($height: 45%, $top: 55%);
          justify-content: flex-start;
          align-items: center;
          flex-direction: column;
          h2 {
             color: rgb(255, 255, 255);
-            font-size: 1rem;
+            font-size: 0.9rem;
             opacity: 0;
-
             padding-left: 0.5rem;
+            @include media-query(xxsmall) {
+               font-size: 1.1rem;
+            }
+            @include media-query(xsmall) {
+               font-size: 1.3rem;
+            }
+            @include media-query(smaller) {
+               font-size: 1.9rem;
+            }
+            @include media-query(xlarge) {
+               font-size: 3rem;
+            }
+            @include media-query(xxlarge) {
+               font-size: 4rem;
+            }
          }
          .header__fuse {
             display: flex;
@@ -47,10 +82,25 @@
                // font-size: 1.5vw;
             }
          }
-         // .header__craftSmall {
-         //    font-family: Mine, Georgia, "Times New Roman", Times, serif;
-         //    color: darkred;
-         // }
+         .header__craftSmall {
+            font-family: Mine, Georgia, "Times New Roman", Times, serif;
+            color: darkred;
+         }
+      }
+
+      .header__title--next {
+         @include header-title($height: 100%);
+         img {
+            position: relative;
+            top: 4rem;
+            transform: scale(0.6);
+            @include media-query(medium) {
+               transform: scale(0.8);
+            }
+            @include media-query(large) {
+               transform: scale(1);
+            }
+         }
       }
    }
 }
@@ -67,6 +117,12 @@
 .header__title--big-grow {
    animation-name: growH1;
    animation-duration: 2s;
+   animation-fill-mode: forwards;
+}
+
+.header__title--next-grow {
+   animation-name: growH1;
+   animation-duration: 1s;
    animation-fill-mode: forwards;
 }
 
@@ -104,6 +160,13 @@
    animation-name: growText;
    animation-duration: 1s;
    animation-delay: 3s;
+   animation-fill-mode: forwards;
+}
+
+.header__title--next-grow h1 {
+   animation-name: growText;
+   animation-duration: 2s;
+   animation-delay: 1s;
    animation-fill-mode: forwards;
 }
 

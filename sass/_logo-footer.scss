@@ -1,20 +1,17 @@
 .logo-footer {
    @include flex-container($flex-direction: row);
    width: 100%;
-   height: 0rem;
+   height: 100%;
    background-color: rgba(108, 72, 25, 0.816);
    border-top: 5px solid darken(rgba(107, 128, 56, 0.7), 10%);
-   @include media-query(small) {
-      height: 16.5rem;
-   }
+
    .logo-footer__sign {
-      display: none;
+      height: 7rem;
+      width: 20rem;
       @include media-query(small) {
+         height: 15rem;
+         width: 40rem;
          display: block;
-         font-size: 5rem;
-         font-family: MineBold, Georgia, "Times New Roman", Times, serif;
-         color: lightgray;
-         text-shadow: 5px 5px #000;
       }
    }
 }

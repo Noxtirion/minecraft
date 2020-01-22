@@ -20,28 +20,36 @@
    </head>
    <body>
       <header class="header" id="top">
-         <div class="menu-next">
-            <div class="menu__wrapper menu__wrapper--next">
+         <div class="menu" id="menu-anchor">
+            <div class="menu__wrapper">
                <section class="menu__brand">
-                  <a href="index.html"> <img class="menu__image" src="./img/kratos.png" alt=""/></a>
+                  <a href="index.html">
+                     <img class="menu__image" src="./img/kratos.png" alt="Szeik as Kratos"
+                  /></a>
                </section>
                <div class="menu__link">
-                  <a href="https://www.twitch.tv/szeik/"><img src="./img/twitch.svg" alt=""/></a>
+                  <a href="https://www.twitch.tv/szeik/"
+                     ><img src="./img/twitch.svg" alt="Twitch icon"
+                  /></a>
                   <a href="https://www.facebook.com/mwszeik"
-                     ><img src="./img/facebook.svg" alt=""
+                     ><img src="./img/facebook.svg" alt="Facebook icon"
                   /></a>
                   <a href="https://www.instagram.com/mwszeik"
-                     ><img src="./img/instagram.svg" alt=""
+                     ><img src="./img/instagram.svg" alt="Instagram icon"
                   /></a>
                   <a href="https://discordapp.com/channels/eZYBr5P"
-                     ><img src="./img/discord.svg" alt=""
+                     ><img src="./img/discord.svg" alt="Discord icon"
                   /></a>
                </div>
             </div>
-            <div
-               class="menu__wrapper menu__wrapper--links menu__wrapper--next menu__wrapper--color-green"
-            >
-               <nav class="menu__links menu__links--next">
+            <button class="menu__button">Menu</button>
+            <div class="menu__wrapper menu__wrapper--links">
+               <nav class="menu__links">
+                  <li><a href="#prawo">Podstawowe prawo</a></li>
+                  <li><a href="#prosto">Prosto...</a></li>
+                  <li><a href="#zbiornica">Zbiornica</a></li>
+                  <li><a href="#kwadrat">Hierarchia</a></li>
+                  <li><a href="#karczma">Karczma</a></li>
                   <li>
                      <a class="menu__arrow-wrapper" href="index.html"
                         ><span class="menu__arrow menu__arrow--show"><</span
@@ -54,12 +62,21 @@
                         ><span class="menu__arrow menu__arrow--show">></span></a
                      >
                   </li>
-                  <li><a href="#zbiornica">Zbiornica</a></li>
-                  <li><a href="#kwadrat">Hierarchia</a></li>
                </nav>
             </div>
          </div>
-         <div class="header__wrapper"></div>
+         <div class="header__wrapper">
+            <div class="header__title header__title--big header__title--next">
+               <h1>
+                  <img
+                     src="./img/minecraft-header-image.png"
+                     alt=""
+                     title="Minecraft Dead Island Png FreePNGImg.com"
+                  />
+               </h1>
+            </div>
+            <div class="header__image"></div>
+         </div>
       </header>
 
       <section class="article">
@@ -69,7 +86,16 @@
                <img src="./img/minecraft-btmLeft.png" alt="" />
             </div>
             <div class="article__text article__text--next">
-               <h3 class="article__sub-section">Prostopadłościan</h3>
+               <h3 class="article__sub-section article__sub-section--top" id="prawo">
+                  Podstawowe prawo!
+               </h3>
+               <h3 class="article__color-red">
+                  <img src="./img/minecraft-creeper.png" alt="" />Zabrania się bez zezwolenia
+                  prowadzenia jakiejkolwiek działalności gospodarczej na serwerze (prowadzenia
+                  sklepu, gospody, kasyna, organizacji gier losowych itp.). Jeśli masz pomysł na
+                  ciekawe rzeczy najpierw napisz do Szeik w wiadomości prywatnej na DC.
+               </h3>
+               <h3 class="article__sub-section" id="prosto">Prostopadłościan</h3>
                <h3>
                   <img src="./img/minecraft-creeper.png" alt="" />Każdy gracz w momencie pierwszego
                   wejścia na serwer otrzymuje na serwerze powierzchnię chronioną (Prostopadłościan)
@@ -115,7 +141,7 @@
                      dla pozostałych graczy wynosi 1000 dukatów.
                   </li>
                </ol>
-               <h3 class="article__sub-section article__sub-section--bottom" id="zbiornica">
+               <h3 class="article__sub-section" id="zbiornica">
                   Zbiornica
                </h3>
                <h3 class="article__secondHeading">
@@ -225,6 +251,30 @@
                   Na sam koniec najwyższa ranga, najwyższe przywileje, najlepiej takich omijać z
                   daleka by nie narazić się na ich gniew - Pryncypał.
                </p>
+               <h3 class="article__sub-section article__sub-section--bottom" id="karczma">
+                  Karczma
+               </h3>
+               <h3 class="article__secondHeading">
+                  <img src="./img/minecraft-creeper.png" alt="" />Każdy gracz po uzyskaniu licencji
+                  od władz miasta może prowadzić gospodę. Koszt takiego upoważnienia wynosi:
+               </h3>
+               <ol>
+                  <li>dla subskrybentów kanału – 500 dukatów,</li>
+                  <li>dla pozostałych widzów – 1000 dukatów.</li>
+               </ol>
+               <p>
+                  Dodatkowo każda brawurowa gra losowa dla mieszkańców zainstalowana w takiej
+                  gospodzie, podlega rejestracji w ratuszu miejskim. Konieczny jest przy spisie
+                  wykup pieczęci: Koszt wynosi:
+               </p>
+               <ol>
+                  <li>dla subskrybentów kanału – 400 dukatów,</li>
+                  <li>dla pozostałych widzów – 800 dukatów.</li>
+               </ol>
+               <p>
+                  Dodatkowo właściciel gospody, może bez żadnych konsekwencji posiadać w oberży,
+                  pokoje lub mieszkania do odsprzedaży.
+               </p>
             </div>
 
             <div class="article__image article__image--figure article__image--figure-right">
@@ -233,7 +283,12 @@
          </div>
       </section>
       <section class="logo-footer">
-         <p class="logo-footer__sign">MINECRAFT</p>
+         <img
+            class="logo-footer__sign"
+            src="./img/minecraft-sign.png"
+            alt="minecraft logo image"
+            title="Minecraft Dead Island Png FreePNGImg.com"
+         />
       </section>
       <div class="button-top">
          <a class="button-top__link" href="#top"> <button class="button-top__return">Up</button></a>

@@ -102,7 +102,7 @@
 
          li {
             padding: 5px;
-            margin: 15px;
+            margin: 5px;
             margin-right: 10px;
             @include media-query(large) {
                margin: 0 20px;
@@ -185,60 +185,60 @@
    }
 }
 
-.menu-next {
-   @include flex-container($flex-direction: row, $justify-content: space-around);
-   z-index: 10;
-   width: 100%;
-   flex-wrap: wrap;
-   background-color: rgba(77, 103, 16, 0.7);
+// .menu-next {
+//    @include flex-container($flex-direction: row, $justify-content: space-around);
+//    z-index: 10;
+//    width: 100%;
+//    flex-wrap: wrap;
+//    background-color: rgba(77, 103, 16, 0.7);
 
-   .menu__wrapper--next {
-      justify-content: center;
-      align-items: center;
+//    .menu__wrapper--next {
+//       justify-content: center;
+//       align-items: center;
 
-      // width: auto;
-      @include media-query(xlarge) {
-         width: auto;
-         // background-color: rgba(0, 0, 0, 0);
-      }
-   }
+//       // width: auto;
+//       @include media-query(xlarge) {
+//          width: auto;
+//          // background-color: rgba(0, 0, 0, 0);
+//       }
+//    }
 
-   .menu__wrapper--color-green {
-      background-color: rgba(77, 93, 40, 0.7);
-      @include media-query(xlarge) {
-         background-color: rgba(0, 0, 0, 0);
-      }
-   }
+//    .menu__wrapper--color-green {
+//       background-color: rgba(77, 93, 40, 0.7);
+//       @include media-query(xlarge) {
+//          background-color: rgba(0, 0, 0, 0);
+//       }
+//    }
 
-   .menu__links--next {
-      height: auto;
-      visibility: visible;
-      flex-direction: row;
-      justify-content: center;
-      li:nth-child(4) {
-         margin-right: 15px;
-      }
-      li {
-         margin: 15px;
-      }
-   }
+//    .menu__links--next {
+//       height: auto;
+//       visibility: visible;
+//       flex-direction: row;
+//       justify-content: center;
+//       li:nth-child(4) {
+//          margin-right: 15px;
+//       }
+//       li {
+//          margin: 15px;
+//       }
+//    }
 
-   .menu__links--second {
-      font-size: 1rem;
-      li {
-         margin: 10px;
-      }
-      @include media-query(xxsmall) {
-         font-size: 1.2rem;
-         li {
-            margin: 15px;
-         }
-      }
-      @include media-query(xxlarge) {
-         font-size: 1.5rem;
-      }
-      @include media-query(hd) {
-         font-size: 2rem;
-      }
-   }
-}
+//    .menu__links--second {
+//       font-size: 1rem;
+//       li {
+//          margin: 10px;
+//       }
+//       @include media-query(xxsmall) {
+//          font-size: 1.2rem;
+//          li {
+//             margin: 15px;
+//          }
+//       }
+//       @include media-query(xxlarge) {
+//          font-size: 1.5rem;
+//       }
+//       @include media-query(hd) {
+//          font-size: 2rem;
+//       }
+//    }
+// }
