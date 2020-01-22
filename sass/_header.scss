@@ -13,9 +13,6 @@
          background: url(../img/MINECRAFT_1920x1080.png) center no-repeat;
       }
 
-      // .header__image--min {
-      // }
-
       .header__title--big {
          @include header-title($height: 55%);
          justify-content: center;
@@ -78,10 +75,8 @@
             font-size: 0.8rem;
             text-align: center;
             letter-spacing: 2px;
-            @include media-query(medium) {
-               // font-size: 1.5vw;
-            }
          }
+
          .header__craftSmall {
             font-family: Mine, Georgia, "Times New Roman", Times, serif;
             color: darkred;

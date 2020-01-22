@@ -4,9 +4,11 @@
    z-index: 10;
    width: 100%;
    flex-wrap: wrap;
-   // background-color: #829457;
-   // border-bottom: 5px solid darken(#829457, 10%);
-   // display: none;
+
+   .gallery {
+      pointer-events: none;
+   }
+
    @include media-query(xlarge) {
       background-color: rgba(0, 0, 0, 0);
       border-bottom: none;
@@ -76,10 +78,6 @@
       flex-direction: column;
       align-items: flex-start;
       background-color: darken(#829457, 10%);
-      // @include media-query(xlarge) {
-      //    background-color: rgba(0, 0, 0, 0);
-      //    width: 100%;
-      // }
 
       .menu__links {
          height: 0;
@@ -92,24 +90,11 @@
          flex-direction: column;
          flex-wrap: wrap;
 
-         li:nth-child(4) {
-            margin-right: 0;
-         }
-
-         li:nth-child(5) {
-            margin-right: 0;
-         }
-
          li {
             padding: 5px;
             margin: 5px;
             margin-right: 10px;
-            @include media-query(large) {
-               margin: 0 20px;
-            }
-            // @include media-query(xxlarge) {
-            //    margin: 0 15px;
-            // }
+
             .menu__arrow-wrapper:hover {
                text-decoration: none;
             }
@@ -152,9 +137,7 @@
       width: 6rem;
       padding: 5px;
       margin-left: 15px;
-      // @include media-query(xlarge) {
-      //    margin-left: 15px;
-      // }
+
       .menu__image {
          width: 100%;
          height: 100%;
@@ -184,61 +167,3 @@
       }
    }
 }
-
-// .menu-next {
-//    @include flex-container($flex-direction: row, $justify-content: space-around);
-//    z-index: 10;
-//    width: 100%;
-//    flex-wrap: wrap;
-//    background-color: rgba(77, 103, 16, 0.7);
-
-//    .menu__wrapper--next {
-//       justify-content: center;
-//       align-items: center;
-
-//       // width: auto;
-//       @include media-query(xlarge) {
-//          width: auto;
-//          // background-color: rgba(0, 0, 0, 0);
-//       }
-//    }
-
-//    .menu__wrapper--color-green {
-//       background-color: rgba(77, 93, 40, 0.7);
-//       @include media-query(xlarge) {
-//          background-color: rgba(0, 0, 0, 0);
-//       }
-//    }
-
-//    .menu__links--next {
-//       height: auto;
-//       visibility: visible;
-//       flex-direction: row;
-//       justify-content: center;
-//       li:nth-child(4) {
-//          margin-right: 15px;
-//       }
-//       li {
-//          margin: 15px;
-//       }
-//    }
-
-//    .menu__links--second {
-//       font-size: 1rem;
-//       li {
-//          margin: 10px;
-//       }
-//       @include media-query(xxsmall) {
-//          font-size: 1.2rem;
-//          li {
-//             margin: 15px;
-//          }
-//       }
-//       @include media-query(xxlarge) {
-//          font-size: 1.5rem;
-//       }
-//       @include media-query(hd) {
-//          font-size: 2rem;
-//       }
-//    }
-// }
