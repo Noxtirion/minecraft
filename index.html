@@ -26,11 +26,11 @@
       <header class="header" id="top">
          <div class="menu" id="menu-anchor">
             <div class="menu__wrapper">
-               <section class="menu__brand">
+               <div class="menu__brand">
                   <a href="index.html">
                      <img class="menu__image" src="./img/kratos.png" alt="Szeik as Kratos"
                   /></a>
-               </section>
+               </div>
                <div class="menu__link">
                   <a href="https://www.twitch.tv/szeik/"
                      ><img src="./img/twitch.svg" alt="Twitch icon"
@@ -49,38 +49,35 @@
             <button class="menu__button">Menu</button>
             <div class="menu__wrapper menu__wrapper--links">
                <nav class="menu__links">
-                  <li><a href="#regulations">Regulamin</a></li>
-                  <li><a href="#access">Wbij do nas</a></li>
-                  <li><a href="#gallery" class="gallery">Galeria</a></li>
-                  <li>
-                     <a class="menu__arrow-wrapper" href="wtyczki.html"
-                        >Wtyczki i modyfikacje <span class="menu__arrow">>></span
-                        ><span class="menu__arrow menu__arrow--show">></span></a
-                     >
-                  </li>
-                  <li>
-                     <a class="menu__arrow-wrapper" href="przywileje.html"
-                        >Przywileje <span class="menu__arrow">>></span
-                        ><span class="menu__arrow menu__arrow--show">></span></a
-                     >
-                  </li>
+                  <ol>
+                     <li><a href="#regulations">Regulamin</a></li>
+                     <li><a href="#access">Wbij do nas</a></li>
+                     <li><a href="#gallery" class="gallery">Galeria</a></li>
+                     <li>
+                        <a class="menu__arrow-wrapper" href="wtyczki.html"
+                           >Wtyczki i modyfikacje <span class="menu__arrow">>></span
+                           ><span class="menu__arrow menu__arrow--show">></span></a
+                        >
+                     </li>
+                     <li>
+                        <a class="menu__arrow-wrapper" href="przywileje.html"
+                           >Przywileje <span class="menu__arrow">>></span
+                           ><span class="menu__arrow menu__arrow--show">></span></a
+                        >
+                     </li>
+                  </ol>
                </nav>
             </div>
          </div>
          <div class="header__wrapper">
             <div class="header__title header__title--big">
-               <h1>
-                  Rzeźnia wieczorową porą, czyli...
-               </h1>
+               <h1>Rzeźnia wieczorową porą, czyli...</h1>
             </div>
             <div class="header__title header__title--small">
                <div class="header__fuse">
-                  <h2 class="header__craftSmall">Pokwadratowany &nbsp</h2>
-                  <h2>(prze)stwór!</h2>
+                  <span class="header__craftSmall">Pokwadratowany &nbsp;</span>
+                  <span>(prze)stwór!</span>
                </div>
-               <!-- <h2 class="header__server">
-                  i15.liveserver.pl:24079 &nbsp &nbsp Wersja: 1.14.4
-               </h2> -->
             </div>
             <div class="header__image"></div>
          </div>
@@ -192,8 +189,8 @@
                   </li>
                </ol>
                <p>
-                  <b>Adres serwera:</b> &nbsp &nbsp i15.liveserver.pl:24079 &nbsp &nbsp Wersja:
-                  1.14.4
+                  <b>Adres serwera:</b> &nbsp; &nbsp; i15.liveserver.pl:24079 &nbsp; &nbsp; Wersja:
+                  1.15.1
                </p>
             </div>
             <div class="article__image article__image--figure article__image--figure-right">
@@ -216,7 +213,7 @@
          </div>
       </section>
       <div class="button-top">
-         <a class="button-top__link" href="#top"> <button class="button-top__return">Up</button></a>
+         <button class="button-top__return"><a class="button-top__link" href="#top">Up</a></button>
       </div>
       <!-- Vendor -->
 

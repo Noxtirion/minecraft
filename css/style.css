@@ -195,27 +195,46 @@ p {
       flex-wrap: wrap;
 }
 
-.menu__wrapper--links .menu__links li {
+.menu__wrapper--links .menu__links ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.menu__wrapper--links .menu__links ol li {
   padding: 5px;
   margin: 5px;
   margin-right: 10px;
 }
 
-.menu__wrapper--links .menu__links li .menu__arrow-wrapper:hover {
+.menu__wrapper--links .menu__links ol li .gallery {
+  color: darkgray;
+}
+
+.menu__wrapper--links .menu__links ol li .menu__arrow-wrapper:hover {
   text-decoration: none;
 }
 
-.menu__wrapper--links .menu__links li a {
+.menu__wrapper--links .menu__links ol li a {
   text-decoration: none;
   color: darkred;
 }
 
-.menu__wrapper--links .menu__links li a:hover {
+.menu__wrapper--links .menu__links ol li a:hover {
   text-decoration: underline;
 }
 
 @media (min-width: 460px) {
-  .menu__wrapper--links .menu__links {
+  .menu__wrapper--links .menu__links ol {
     font-size: 1.2rem;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -228,7 +247,7 @@ p {
 }
 
 @media (min-width: 1200px) {
-  .menu__wrapper--links .menu__links {
+  .menu__wrapper--links .menu__links ol {
     background-color: rgba(0, 0, 0, 0);
     width: auto;
     padding-left: 5px;
@@ -236,13 +255,13 @@ p {
 }
 
 @media (min-width: 1440px) {
-  .menu__wrapper--links .menu__links {
+  .menu__wrapper--links .menu__links ol {
     font-size: 1.5rem;
   }
 }
 
 @media (min-width: 1920px) {
-  .menu__wrapper--links .menu__links {
+  .menu__wrapper--links .menu__links ol {
     font-size: 2rem;
   }
 }
@@ -396,39 +415,40 @@ p {
           flex-direction: column;
 }
 
-.header__wrapper .header__title--small h2 {
+.header__wrapper .header__title--small span {
   color: white;
   font-size: 0.9rem;
   opacity: 0;
   padding-left: 0.5rem;
+  font-weight: bold;
 }
 
 @media (min-width: 375px) {
-  .header__wrapper .header__title--small h2 {
+  .header__wrapper .header__title--small span {
     font-size: 1.1rem;
   }
 }
 
 @media (min-width: 460px) {
-  .header__wrapper .header__title--small h2 {
+  .header__wrapper .header__title--small span {
     font-size: 1.3rem;
   }
 }
 
 @media (min-width: 700px) {
-  .header__wrapper .header__title--small h2 {
+  .header__wrapper .header__title--small span {
     font-size: 1.9rem;
   }
 }
 
 @media (min-width: 1200px) {
-  .header__wrapper .header__title--small h2 {
+  .header__wrapper .header__title--small span {
     font-size: 3rem;
   }
 }
 
 @media (min-width: 1440px) {
-  .header__wrapper .header__title--small h2 {
+  .header__wrapper .header__title--small span {
     font-size: 4rem;
   }
 }
@@ -577,7 +597,7 @@ p {
           animation-fill-mode: forwards;
 }
 
-.header__title--small-grow h2 {
+.header__title--small-grow span {
   -webkit-animation-name: growText;
           animation-name: growText;
   -webkit-animation-duration: 1s;
@@ -588,7 +608,7 @@ p {
           animation-fill-mode: forwards;
 }
 
-.header__title--next-grow h1 {
+.header__title--next-grow span {
   -webkit-animation-name: growText;
           animation-name: growText;
   -webkit-animation-duration: 2s;
@@ -815,6 +835,10 @@ p {
   display: block;
 }
 
+.article__text--next .article__list-no-number {
+  list-style-type: none;
+}
+
 .article__text--second {
   margin-bottom: 0;
 }
@@ -884,6 +908,17 @@ p {
 .button-top__link {
   height: 100%;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: #fff;
 }
 
 .button-top__return {
@@ -897,7 +932,6 @@ p {
   cursor: pointer;
   outline: none;
   border: 0rem;
-  color: #fff;
   border-top: 5px solid rgba(77, 103, 16, 0.4);
 }
 

@@ -47,11 +47,12 @@
          justify-content: flex-start;
          align-items: center;
          flex-direction: column;
-         h2 {
+         span {
             color: rgb(255, 255, 255);
             font-size: 0.9rem;
             opacity: 0;
             padding-left: 0.5rem;
+            font-weight: bold;
             @include media-query(xxsmall) {
                font-size: 1.1rem;
             }
@@ -151,14 +152,14 @@
    animation-fill-mode: forwards;
 }
 
-.header__title--small-grow h2 {
+.header__title--small-grow span {
    animation-name: growText;
    animation-duration: 1s;
    animation-delay: 3s;
    animation-fill-mode: forwards;
 }
 
-.header__title--next-grow h1 {
+.header__title--next-grow span {
    animation-name: growText;
    animation-duration: 2s;
    animation-delay: 1s;

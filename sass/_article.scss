@@ -161,6 +161,9 @@
       h3 {
          display: block;
       }
+      .article__list-no-number {
+         list-style-type: none;
+      }
    }
 
    &__text--second {

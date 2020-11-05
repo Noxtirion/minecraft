@@ -31,11 +31,11 @@ window.addEventListener("load", () => {
    const buttonUp = document.querySelector(".button-top");
 
    const options = {
-      rootMargin: "0px 0px -150px 0px"
+      rootMargin: "0px 0px -150px 0px",
    };
 
-   const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-      entries.forEach(entry => {
+   const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+      entries.forEach((entry) => {
          if (!entry.isIntersecting) {
             return;
          } else {
@@ -45,7 +45,7 @@ window.addEventListener("load", () => {
       });
    }, options);
 
-   ladders.forEach(fader => {
+   ladders.forEach((fader) => {
       appearOnScroll.observe(fader);
    });
 
@@ -53,31 +53,35 @@ window.addEventListener("load", () => {
 
    const figuresOptions = {
       threshold: 0,
-      rootMargin: "0px 0px -150px 0px"
+      rootMargin: "0px 0px -150px 0px",
    };
 
-   const appearOnScrollFigures = new IntersectionObserver(function(entries, appearOnScrollFigures) {
-      entries.forEach(entry => {
+   const appearOnScrollFigures = new IntersectionObserver(function (
+      entries,
+      appearOnScrollFigures
+   ) {
+      entries.forEach((entry) => {
          if (!entry.isIntersecting) {
             entry.target.classList.remove("appear");
          } else {
             entry.target.classList.add("appear");
          }
       });
-   }, figuresOptions);
+   },
+   figuresOptions);
 
-   figures.forEach(fader => {
+   figures.forEach((fader) => {
       appearOnScrollFigures.observe(fader);
    });
 
    //////////////////////////////////
 
    const buttonOptions = {
-      rootMargin: "0px 0px -50px 0px"
+      rootMargin: "0px 0px -50px 0px",
    };
 
-   const appearOnScrollButton = new IntersectionObserver(function(entries, appearOnScrollButton) {
-      entries.forEach(entry => {
+   const appearOnScrollButton = new IntersectionObserver(function (entries, appearOnScrollButton) {
+      entries.forEach((entry) => {
          if (entry.isIntersecting) {
             buttonUp.classList.remove("appear");
          } else {
@@ -92,24 +96,18 @@ window.addEventListener("load", () => {
 
    $(".menu__links a").smoothScroll({
       offset: -30,
-      afterScroll: function() {
-         $(this)
-            .closest(".menu__links")
-            .find("a")
-            .removeClass("active");
+      afterScroll: function () {
+         $(this).closest(".menu__links").find("a").removeClass("active");
          $(this).addClass("active");
-      }
+      },
    });
 
    $(".button-top a").smoothScroll({
       offset: 0,
-      afterScroll: function() {
-         $(this)
-            .closest(".button-top")
-            .find("a")
-            .removeClass("active");
+      afterScroll: function () {
+         $(this).closest(".button-top").find("a").removeClass("active");
          $(this).addClass("active");
-      }
+      },
    });
 
    //////// Menu Button
@@ -118,7 +116,7 @@ window.addEventListener("load", () => {
    const menuLinks = document.querySelector(".menu__links");
    const toggleMenu = () => {
       if (menuButton != null) {
-         menuButton.addEventListener("click", function() {
+         menuButton.addEventListener("click", function () {
             if (this.innerHTML === "Menu") {
                this.innerHTML = "Close";
                menuLinks.classList.add("menu__links--open");
