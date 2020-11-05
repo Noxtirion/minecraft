@@ -16,3 +16,7 @@ A non-profit page which I was asked to prepare in order to introduce general rul
 
 -  BEM
 
+## Live
+
+[Live](https://noxtirion.github.io/minecraft/)
+
